@@ -1,5 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+/*
+ * TODO:
+ * Check Weight Limit
+ * Restrict bot weights
+ * Restrict max upgrade
+ * 
+ */
+
+
 using System.Diagnostics;
 using System.Text.Json;
 using Battlebot_Manager;

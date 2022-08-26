@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj": {}
+    "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj": {
+    "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
+        "projectUniqueName": "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
         "projectName": "Battlebot-Manager",
-        "projectPath": "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
+        "projectPath": "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
         "packagesPath": "C:\\Users\\dgame\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\obj\\",
+        "outputPath": "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dgame\\AppData\\Roaming\\NuGet\\NuGet.Config"

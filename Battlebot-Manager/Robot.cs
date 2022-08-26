@@ -7,7 +7,7 @@ public class Robot
     [JsonInclude] public string Name = "BotName";
     [JsonInclude] public int Weight;
     [JsonInclude] public int Strongness;
-    [JsonInclude] public List<BotModule> Modules;
+    [JsonInclude] public List<BotModule> Modules = new List<BotModule>();
     public Team Team;
 
     public Robot() { }

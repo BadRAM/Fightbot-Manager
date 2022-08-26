@@ -1,6 +1,6 @@
 {
-  "Month": 3,
-  "Cash": 12000,
+  "Month": 4,
+  "Cash": 8750,
   "Team": {
     "Name": "Snodefighters",
     "Robots": [
@@ -9,6 +9,18 @@
         "Weight": 25,
         "Strongness": 10,
         "Modules": []
+      },
+      {
+        "Name": "Snoodle",
+        "Weight": 10,
+        "Strongness": 4,
+        "Modules": null
+      },
+      {
+        "Name": "Snord",
+        "Weight": 50,
+        "Strongness": 1,
+        "Modules": null
       }
     ],
     "Trophies": [

@@ -81,7 +81,6 @@ public static class GameMenus
             Console.WriteLine();
             Console.WriteLine();
             
-            
             // prompt player to select bot from their roster
             Console.WriteLine("Which bot do you want to enter with?");
             List<string> botList = new List<string>();
@@ -117,7 +116,8 @@ public static class GameMenus
 
     public static void Garage(Campaign campaign)
     {
-        while (true)
+        bool quit = false;
+        while (!quit)
         {
             // List robots
             Console.WriteLine("##| WT |PL| NAME");
@@ -126,7 +126,7 @@ public static class GameMenus
                 Robot bot = campaign.Team.Robots[i];
                 Console.WriteLine($"{(i+1).ToString().PadRight(2)}|" +
                                   $"{bot.Weight.ToString().PadRight(4)}|" +
-                                  $"{bot.Strongness.ToString().PadRight(2)}" +
+                                  $"{bot.Strongness.ToString().PadRight(2)}| " +
                                   $"{bot.Name}");
             }
             Console.WriteLine();
@@ -146,31 +146,117 @@ public static class GameMenus
             switch (response)
             {
                 case 1: // build new robot
-                    Robot newbot = new Robot();
-                    while (true)
-                    {
-                        Console.WriteLine("Building new robot. Enter Weight:");
-                        Console.Write("?>");
-                        if (int.TryParse(Console.ReadLine(), out newbot.Weight))
-                        {
-                            break;
-                        }
-                        Console.WriteLine();
-                        Console.WriteLine("Not a valid response!");
-                        Console.WriteLine();
-                    }
-                    
-                    Console.WriteLine();
-                    Console.WriteLine("Enter Weight");
-                    
+                    NewBot(campaign);
                     break;
                 case 2: // upgrade existing robot
+                    UpgradeBot(campaign);
                     break;
                 case 3: // rename existing robot
+                    Console.WriteLine("haha not implemented yet");
                     break;
                 case 4: // return to top level menu
+                    quit = true;
                     break;
             }
+        }
+    }
+
+    private static void NewBot(Campaign campaign)
+    {
+        Robot newbot = new Robot();
+        while (true)
+        {
+            Console.WriteLine("Building new robot. Enter Weight:");
+            Console.Write("?> ");
+            if (int.TryParse(Console.ReadLine(), out newbot.Weight))
+            {
+                Console.WriteLine();
+                int cost = newbot.Weight * newbot.Weight / 2;
+                if (cost > campaign.Cash)
+                {
+                    Console.WriteLine($"This bot would cost ${cost} to build,");
+                    Console.WriteLine($"You only have ${campaign.Cash}");
+                    Console.WriteLine();
+
+                    if (!PromptYN("Start again?"))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                if (PromptYN($"This bot will cost ${cost} to build,\n" +
+                             $"you have ${campaign.Cash}, continue?"))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    campaign.Cash -= cost;
+                    Console.WriteLine("Robot built! Give it a name:");
+                    Console.Write("?> ");
+                    newbot.Name = Console.ReadLine();
+                    campaign.Team.Robots.Add(newbot);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    if (!PromptYN("Start again?"))
+                    {
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Not a valid response!");
+                Console.WriteLine();
+            }
+        }
+    }
+
+    private static void UpgradeBot(Campaign campaign)
+    {
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("Which bot to upgrade?");
+        List<string> upgradeList = new List<string>();
+        foreach (Robot bot in campaign.Team.Robots)
+        {
+            upgradeList.Add(bot.Name);
+        }
+
+        int response = Prompt(upgradeList.ToArray());
+        Console.WriteLine();
+        Console.WriteLine();
+
+        // store selected bot
+        Robot sBot = campaign.Team.Robots[response - 1];
+        int cost = (int)Math.Pow(2, sBot.Strongness) * sBot.Weight * sBot.Weight / 2;
+
+        if (cost > campaign.Cash)
+        {
+            Console.WriteLine($"This upgrade would cost ${cost},");
+            Console.WriteLine($"You only have ${campaign.Cash}");
+            Console.WriteLine();
+
+            if (PromptYN("Start again?"))
+            {
+                UpgradeBot(campaign);
+            }
+            return;
+        }
+        
+        if (PromptYN($"Upgrading {sBot.Name} will cost ${cost},\n" +
+                     $"you have ${campaign.Cash}, continue?"))
+        {
+            campaign.Cash -= cost;
+            campaign.Team.Robots[response - 1].Strongness++;
+            Console.WriteLine();
+            Console.WriteLine("Upgrade Complete!");
         }
     }
 

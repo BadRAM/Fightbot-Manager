@@ -1,0 +1,195 @@
+[
+  {
+    "Name": "Rookie Rumble Monthly",
+    "Size": 2,
+    "WeightLimit": 25,
+    "TeamSize": 2,
+    "EntryFee": 0,
+    "Prize": 1000,
+    "Trophy": {
+      "Name": "Tiny Nut",
+      "Description": "",
+      "TeamName": "",
+      "Month": 0
+    },
+    "Entries": [
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 1
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 2
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 3
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 4
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 5
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 6
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 7
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 8
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 9
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 10
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 11
+      },
+      {
+        "Name": "Rookie Rumble {0}",
+        "Month": 12
+      }
+    ]
+  },
+  {
+    "Name": "Senior Smashup Monthly",
+    "Size": 3,
+    "WeightLimit": 25,
+    "TeamSize": 2,
+    "EntryFee": 1000,
+    "Prize": 5000,
+    "Trophy": {
+      "Name": "Large Nut",
+      "Description": "",
+      "TeamName": "",
+      "Month": 0
+    },
+    "Entries": [
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 1
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 2
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 3
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 4
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 5
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 6
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 7
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 8
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 9
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 10
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 11
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 12
+      }
+    ]
+  },
+  {
+    "Name": "Mech",
+    "Size": 3,
+    "WeightLimit": 25,
+    "TeamSize": 2,
+    "EntryFee": 1000,
+    "Prize": 5000,
+    "Trophy": {
+      "Name": "Large Nut",
+      "Description": "",
+      "TeamName": "",
+      "Month": 0
+    },
+    "Entries": [
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 1
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 2
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 3
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 4
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 5
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 6
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 7
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 8
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 9
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 10
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 11
+      },
+      {
+        "Name": "Senior Smashup {0}",
+        "Month": 12
+      }
+    ]
+  }
+]
+

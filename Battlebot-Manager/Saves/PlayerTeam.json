@@ -1,0 +1,25 @@
+{
+  "Month": 4,
+  "Cash": 4000,
+  "Team": {
+    "Name": "PlayerTeam",
+    "Robots": [
+      {
+        "Name": "Sneed",
+        "Weight": 25,
+        "Strongness": 10,
+        "Modules": []
+      }
+    ],
+    "Trophies": [
+      {
+        "Name": "",
+        "Description": "",
+        "BotName": "",
+        "TeamName": "",
+        "Month": 0
+      }
+    ]
+  },
+  "Inventory": []
+}

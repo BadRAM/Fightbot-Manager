@@ -1,0 +1,15 @@
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\bin\Debug\net6.0\Battlebot-Manager.exe
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\bin\Debug\net6.0\Battlebot-Manager.deps.json
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\bin\Debug\net6.0\Battlebot-Manager.runtimeconfig.json
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\bin\Debug\net6.0\Battlebot-Manager.dll
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\bin\Debug\net6.0\Battlebot-Manager.pdb
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.csproj.AssemblyReference.cache
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.AssemblyInfoInputs.cache
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.AssemblyInfo.cs
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.csproj.CoreCompileInputs.cache
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.dll
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\refint\Battlebot-Manager.dll
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.pdb
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\Battlebot-Manager.genruntimeconfig.cache
+C:\Users\dgame\RiderProjects\Battlebot-Manager\Battlebot-Manager\obj\Debug\net6.0\ref\Battlebot-Manager.dll

@@ -1,0 +1,64 @@
+[
+  {
+    "Name": "BadRAM\u0027s Bots",
+    "Robots": [
+      {
+        "Name": "Carpet Shark",
+        "Weight": 10,
+        "Strongness": 1,
+        "Modules": []
+      },
+      {
+        "Name": "Who\u0027s Afraid of PLA?",
+        "Weight": 25,
+        "Strongness": 4,
+        "Modules": []
+      },
+      {
+        "Name": "Deadshaft",
+        "Weight": 50,
+        "Strongness": 6,
+        "Modules": []
+      },
+      {
+        "Name": "Pauldron",
+        "Weight": 100,
+        "Strongness": 5,
+        "Modules": []
+      }
+    ]
+  },
+  {
+    "Name": "Nerds United",
+    "Robots": [
+      {
+        "Name": "Superstar Warrior",
+        "Weight": 25,
+        "Strongness": 5,
+        "Modules": []
+      }
+    ]
+  },
+  {
+    "Name": "Robot Disassembly Corporation",
+    "Robots": [
+      {
+        "Name": "Mutilator",
+        "Weight": 25,
+        "Strongness": 7,
+        "Modules": []
+      }
+    ]
+  },
+  {
+    "Name": "Boston Dynamos",
+    "Robots": [
+      {
+        "Name": "Sport",
+        "Weight": 25,
+        "Strongness": 6,
+        "Modules": []
+      }
+    ]
+  }
+]

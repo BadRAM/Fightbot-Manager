@@ -1,0 +1,32 @@
+{
+  "Month": 3,
+  "Cash": 12000,
+  "Team": {
+    "Name": "Snodefighters",
+    "Robots": [
+      {
+        "Name": "Sneed",
+        "Weight": 25,
+        "Strongness": 10,
+        "Modules": []
+      }
+    ],
+    "Trophies": [
+      {
+        "Name": "Tiny Nut",
+        "EventName": "Rookie Rumble January, 2000",
+        "BotName": "Sneed",
+        "TeamName": "Snodefighters",
+        "Month": 0
+      },
+      {
+        "Name": "Large Nut",
+        "EventName": "Senior Smashup February, 2000",
+        "BotName": "Sneed",
+        "TeamName": "Snodefighters",
+        "Month": 1
+      }
+    ]
+  },
+  "Inventory": []
+}

@@ -1,0 +1,31 @@
+{
+  "Month": 9,
+  "Cash": 351,
+  "Team": {
+    "Name": "high",
+    "Robots": [
+      {
+        "Name": "hiii",
+        "Weight": 10,
+        "Strongness": 3,
+        "Modules": []
+      },
+      {
+        "Name": "heih",
+        "Weight": 25,
+        "Strongness": 2,
+        "Modules": []
+      }
+    ],
+    "Trophies": [
+      {
+        "Name": "Tiny Nut",
+        "EventName": "Rookie Rumble April 2000",
+        "BotName": "hiii",
+        "TeamName": "high",
+        "Month": 3
+      }
+    ]
+  },
+  "Inventory": []
+}

@@ -14,13 +14,13 @@
         "Name": "Snoodle",
         "Weight": 10,
         "Strongness": 4,
-        "Modules": null
+        "Modules": []
       },
       {
         "Name": "Snord",
         "Weight": 50,
         "Strongness": 1,
-        "Modules": null
+        "Modules": []
       }
     ],
     "Trophies": [

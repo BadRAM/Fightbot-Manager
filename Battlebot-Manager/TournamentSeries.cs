@@ -37,7 +37,10 @@ public class TournamentSeries
         {
             if (i.Month-1 == month % 12)
             {
-                return string.Format(i.Name, Content.StartDate.AddMonths(month).ToString("MMMM, yyyy"));
+                return string.Format(i.Name, 
+                    Content.StartDate.AddMonths(month).ToString("MMMM"),
+                    Content.StartDate.AddMonths(month).ToString("yyyy"),
+                    Content.StartDate.AddMonths(month).ToString("yy"));
             }
         }
 

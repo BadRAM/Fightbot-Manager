@@ -62,10 +62,9 @@ public static class Content
 
     public static Robot GetRobot(int weightLimit)
     {
-        Team t = Teams[Random.Shared.Next(Teams.Count - 1)];
+        Team t = Teams[Random.Shared.Next(Teams.Count)];
         Robot r = t.PickRobot(weightLimit);
         r.Team = t;
         return r;
     }
-
 }

@@ -1,3 +1,5 @@
+using Battlebot_Manager;
+
 public static class StringExt
 {
     public static string Truncate(this string value, int maxLength)
@@ -31,6 +33,16 @@ public static class Utils
             Console.WriteLine("Not a valid response!");
             Console.WriteLine();
         }
+    }
+
+    public static Robot Prompt(Robot[] robots)
+    {
+        List<string> prompts = new List<string>();
+        foreach (Robot r in robots)
+        {
+            prompts.Add(r.Name);
+        }
+        return robots[Prompt(prompts.ToArray()) - 1];
     }
     
     // asks the user to respond to prompt with Y/N, returns true for Y and false for N

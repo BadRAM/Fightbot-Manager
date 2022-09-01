@@ -83,24 +83,41 @@ public static class GameMenus
             
             // prompt player to select bot from their roster
             Console.WriteLine("Which bot do you want to enter with?");
-            List<string> botList = new List<string>();
+            List<Robot> botList = new List<Robot>();
             for (int i = 0; i < campaign.Team.Robots.Count; i++)
             {
-                botList.Add(campaign.Team.Robots[i].Name);
+                if (campaign.Team.Robots[i].Weight <= events[response-1].Template.WeightLimit)
+                {
+                    botList.Add(campaign.Team.Robots[i]);
+                }
             }
-            botList.Add("attend as a spectator");
-            int selectBot = Prompt(botList.ToArray())-1;
+            List<string> botNames = new List<string>();
+            foreach (Robot r in botList)
+            {
+                botNames.Add(r.Name);
+            }
+            botNames.Add("attend as a spectator");
+            int selectBot = Prompt(botNames.ToArray())-1;
             Console.WriteLine();
             Console.WriteLine();
 
-            if (selectBot == botList.Count-1)
+            if (selectBot == botNames.Count-1)
             {
                 events[response-1].Start(null, campaign);
             }
             else
             {
-                campaign.Team.Robots[selectBot].Team = campaign.Team;
-                events[response-1].Start(campaign.Team.Robots[selectBot], campaign);
+                if (campaign.Cash < events[response-1].Template.EntryFee)
+                {
+                    Console.WriteLine("You don't have enough cash to enter this event.");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    return;
+                }
+
+                campaign.Cash -= events[response - 1].Template.EntryFee;
+                botList[selectBot].Team = campaign.Team;
+                events[response-1].Start(botList[selectBot], campaign);
             }
             
             campaign.Month++;
@@ -119,8 +136,18 @@ public static class GameMenus
         bool quit = false;
         while (!quit)
         {
+            if (campaign.Team.Robots.Count == 0)
+            {
+                if (PromptYN("You have no robots, build a new one?"))
+                {
+                    NewBot(campaign);
+                }
+                return;
+            }
+            
             // List robots
             Console.WriteLine("##| WT |PL| NAME");
+            Console.WriteLine("――┼――――┼――┼――――――――――――――――");
             for (int i = 0; i < campaign.Team.Robots.Count; i++)
             {
                 Robot bot = campaign.Team.Robots[i];
@@ -152,7 +179,7 @@ public static class GameMenus
                     UpgradeBot(campaign);
                     break;
                 case 3: // rename existing robot
-                    Console.WriteLine("haha not implemented yet");
+                    RenameBot(campaign);
                     break;
                 case 4: // return to top level menu
                     quit = true;
@@ -164,14 +191,25 @@ public static class GameMenus
     private static void NewBot(Campaign campaign)
     {
         Robot newbot = new Robot();
+        int weight;
         while (true)
         {
             Console.WriteLine("Building new robot. Enter Weight:");
             Console.Write("?> ");
-            if (int.TryParse(Console.ReadLine(), out newbot.Weight))
+            if (int.TryParse(Console.ReadLine(), out weight))
             {
+                // check if the player is cheesing weight
+                if (weight < 10 || weight > 500)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Not a valid response!");
+                    Console.WriteLine();
+                    continue;
+                }
                 Console.WriteLine();
-                int cost = newbot.Weight * newbot.Weight / 2;
+                
+                
+                int cost = weight * weight / 2;
                 if (cost > campaign.Cash)
                 {
                     Console.WriteLine($"This bot would cost ${cost} to build,");
@@ -196,16 +234,17 @@ public static class GameMenus
                     campaign.Cash -= cost;
                     Console.WriteLine("Robot built! Give it a name:");
                     Console.Write("?> ");
+                    newbot.Weight = weight;
                     newbot.Name = Console.ReadLine();
                     campaign.Team.Robots.Add(newbot);
-                    break;
+                    return;
                 }
                 else
                 {
                     Console.WriteLine();
                     if (!PromptYN("Start again?"))
                     {
-                        break;
+                        return;
                     }
                 }
             }
@@ -237,6 +276,13 @@ public static class GameMenus
         Robot sBot = campaign.Team.Robots[response - 1];
         int cost = (int)Math.Pow(2, sBot.Strongness) * sBot.Weight * sBot.Weight / 2;
 
+        if (sBot.Strongness >= 10)
+        {
+            Console.WriteLine("This bot has been fully upgraded.");
+            return;
+        }
+        
+
         if (cost > campaign.Cash)
         {
             Console.WriteLine($"This upgrade would cost ${cost},");
@@ -258,6 +304,26 @@ public static class GameMenus
             Console.WriteLine();
             Console.WriteLine("Upgrade Complete!");
         }
+    }
+
+    private static void RenameBot(Campaign campaign)
+    {
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("Rename which bot?");
+        List<string> upgradeList = new List<string>();
+        foreach (Robot bot in campaign.Team.Robots)
+        {
+            upgradeList.Add(bot.Name);
+        }
+
+        int response = Prompt(upgradeList.ToArray());
+        Console.WriteLine();
+        Console.WriteLine();
+        
+        Console.WriteLine("Enter new name:");
+        Console.Write("?> ");
+        campaign.Team.Robots[response - 1].Name = Console.ReadLine();
     }
 
     public static void TrophyRoom(Campaign campaign)

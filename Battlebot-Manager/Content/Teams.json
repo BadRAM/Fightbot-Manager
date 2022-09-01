@@ -5,25 +5,25 @@
       {
         "Name": "Carpet Shark",
         "Weight": 10,
-        "Strongness": 1,
+        "Strongness": 0,
         "Modules": []
       },
       {
         "Name": "Who\u0027s Afraid of PLA?",
         "Weight": 25,
-        "Strongness": 4,
+        "Strongness": 3,
         "Modules": []
       },
       {
         "Name": "Deadshaft",
         "Weight": 50,
-        "Strongness": 6,
+        "Strongness": 5,
         "Modules": []
       },
       {
         "Name": "Pauldron",
         "Weight": 100,
-        "Strongness": 5,
+        "Strongness": 4,
         "Modules": []
       }
     ]
@@ -32,9 +32,15 @@
     "Name": "Nerds United",
     "Robots": [
       {
+        "Name": "Funko Pop Tombstone",
+        "Weight": 10,
+        "Strongness": 1,
+        "Modules": []
+      },
+      {
         "Name": "Superstar Warrior",
         "Weight": 25,
-        "Strongness": 5,
+        "Strongness": 1,
         "Modules": []
       }
     ]
@@ -43,9 +49,21 @@
     "Name": "Robot Disassembly Corporation",
     "Robots": [
       {
-        "Name": "Mutilator",
+        "Name": "Micro Mutilator",
         "Weight": 25,
-        "Strongness": 7,
+        "Strongness": 5,
+        "Modules": []
+      },
+      {
+        "Name": "Pulverizer",
+        "Weight": 25,
+        "Strongness": 6,
+        "Modules": []
+      },
+      {
+        "Name": "Mega Mutilator",
+        "Weight": 50,
+        "Strongness": 6,
         "Modules": []
       }
     ]
@@ -56,9 +74,84 @@
       {
         "Name": "Sport",
         "Weight": 25,
+        "Strongness": 5,
+        "Modules": []
+      },
+      {
+        "Name": "Atlas",
+        "Weight": 50,
+        "Strongness": 3,
+        "Modules": []
+      }
+    ]
+  },
+  {
+    "Name": "Expat Engineering",
+    "Robots": [
+      {
+        "Name": "DIE-ode",
+        "Weight": 10,
+        "Strongness": 4,
+        "Modules": []
+      },
+      {
+        "Name": "James Bot",
+        "Weight": 25,
+        "Strongness": 2,
+        "Modules": []
+      },
+      {
+        "Name": "Sir Smash-o-tron",
+        "Weight": 50,
         "Strongness": 6,
         "Modules": []
       }
     ]
-  }
+  },
+  {
+    "Name": "BSU Robotics club",
+    "Robots": [
+      {
+        "Name": "Hopmatron",
+        "Weight": 10,
+        "Strongness": 3,
+        "Modules": []
+      },
+      {
+        "Name": "Captain Carnage",
+        "Weight": 25,
+        "Strongness": 5,
+        "Modules": []
+      },
+      {
+        "Name": "Knockout",
+        "Weight": 50,
+        "Strongness": 3,
+        "Modules": []
+      }
+    ]
+  },
+  {
+    "Name": "Team Cool Peeps",
+    "Robots": [
+      {
+        "Name": "Thumper",
+        "Weight": 10,
+        "Strongness": 4,
+        "Modules": []
+      },
+      {
+        "Name": "Big Thumper",
+        "Weight": 25,
+        "Strongness": 4,
+        "Modules": []
+      },
+      {
+        "Name": "Bigger Thumper",
+        "Weight": 50,
+        "Strongness": 4,
+        "Modules": []
+      }
+    ]
+  }  
 ]

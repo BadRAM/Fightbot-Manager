@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g4O3RNsWKpVX9T2FKqD4xdxDMqTAhcsFSwDghKK1vx4q7xH6M1hh1+yWSEPTjTENbyUMUaTieasK3k5Vx2Uu9Q==",
+  "dgSpecHash": "t7hiT7obegjpc1waJAWRB1D/vXgV70GB3t8Z1IpCz3fv3ILhazYna2as2rLUdcGqn/3bIe2kfXOAoBujid5OkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dgame\\RiderProjects\\Fightbot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
+  "projectFilePath": "C:\\Users\\dgame\\RiderProjects\\Battlebot-Manager\\Battlebot-Manager\\Battlebot-Manager.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -2,10 +2,6 @@
 
 
 /*
- * TODO:
- * Check Weight Limit
- * Restrict bot weights
- * Restrict max upgrade
  * 
  */
 

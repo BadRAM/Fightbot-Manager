@@ -144,9 +144,10 @@ public class Tournament
     public void Start(Robot? playerBot, Campaign campaign)
     {
         // Generate bracket
+        List<Robot> bots = Content.GetRobots(Template.WeightLimit);
         for (int i = 0; i < Math.Pow(2, Template.Size)-1; i++)
         {
-            _bracket[0].Add(Content.GetRobot(Template.WeightLimit));
+            _bracket[0].Add(bots.RandomPop());
         }
         // insert player bot at random position in base of bracket
         if (playerBot != null)
@@ -155,7 +156,7 @@ public class Tournament
         }
         else // if the player does not enter a bot, add the final bot from content like normal
         {
-            _bracket[0].Add(Content.GetRobot(Template.WeightLimit));
+            _bracket[0].Add(bots.RandomPop());
         }
         
         Console.WriteLine("Welcome to " + Name);
@@ -215,5 +216,10 @@ public class Tournament
         }
 
         return false;
+    }
+
+    public void PopulateBracket()
+    {
+        
     }
 }

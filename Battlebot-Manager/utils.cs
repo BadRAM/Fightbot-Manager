@@ -9,6 +9,22 @@ public static class StringExt
     }
 }
 
+public static class ListExt
+{
+    public static T RandomPick<T>(this List<T> list)
+    {
+        return list[Random.Shared.Next(0, list.Count)];
+    }
+    
+    public static T RandomPop<T>(this List<T> list)
+    {
+        int i = Random.Shared.Next(0, list.Count);
+        T var = list[i];
+        list.RemoveAt(i);
+        return var;
+    }
+}
+
 public static class Utils
 {
     // asks the user to choose from a list of numbered options, 

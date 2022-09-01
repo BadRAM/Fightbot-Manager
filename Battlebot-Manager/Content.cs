@@ -67,4 +67,22 @@ public static class Content
         r.Team = t;
         return r;
     }
+
+    public static List<Robot> GetRobots(int weightLimit)
+    {
+        List<Robot> bots = new List<Robot>();
+        foreach (Team t in Teams)
+        {
+            foreach (Robot r in t.Robots)
+            {
+                if (r.Weight == weightLimit)
+                {
+                    r.Team = t;
+                    bots.Add(r);
+                }
+            }
+        }
+
+        return bots;
+    }
 }
